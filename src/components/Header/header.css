@@ -1,0 +1,10 @@
+.header {
+  padding: 1.5rem 0;
+  background: var(--dark_mode_elements);
+  box-shadow: 0 5px 10px rgba(17, 21, 23, 0.1);
+}
+.header-title {
+  color: var(--dark_mode_text_light_mode_elements);
+  font-size: 24px;
+  font-weight: 800;
+}
