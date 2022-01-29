@@ -38,16 +38,48 @@
   color: var(--dark_mode_text_light_mode_elements);
 }
 
-.filterByRegion {
+.select-box {
   width: 200px;
+}
+
+.selected {
+  width: 100%;
   background: var(--dark_mode_elements);
   color: var(--dark_mode_text_light_mode_elements);
+  font-size: 16px;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  box-shadow: 0 5px 10px rgba(17, 21, 23, 0.1);
+  cursor: pointer;
+}
+
+.items {
+  margin-top: 1rem;
+  background: var(--dark_mode_elements);
+  border-radius: 5px;
   box-shadow: 0 5px 10px rgba(17, 21, 23, 0.1);
 }
 
-.optionRegion {
-  padding: 10px 20px;
+.listItem {
+  display: flex;
+  padding: 15px 20px;
+  color: var(--dark_mode_text_light_mode_elements);
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.listItem:hover {
+  opacity: 0.5;
+  background: var(--dark_mode_background);
+}
+
+.listItem input {
+  display: none;
+}
+
+.listItem label {
+  width: 100%;
+  cursor: pointer;
 }
