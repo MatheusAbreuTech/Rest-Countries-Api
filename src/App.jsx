@@ -9,7 +9,9 @@ function App() {
     <>
       <Header />
       <Filters />
-      <Countries />
+      <div className="countries-container Container">
+        <Countries />
+      </div>
     </>
   );
 }

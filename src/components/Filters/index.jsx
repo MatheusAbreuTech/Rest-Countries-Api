@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 import "./filters.css";
 
@@ -30,8 +31,12 @@ export const Filters = () => {
     const option = value.target.innerHTML;
     setSelectedOption(option);
     setIsOpen(false);
-    console.log(selectedOption);
+    // console.log(selectedOption);
   };
+
+  useEffect(() => {
+    console.log(selectedOption);
+  }, [selectedOption]);
 
   return (
     <div className="Container">
@@ -47,19 +52,15 @@ export const Filters = () => {
 
         <div className="select-box">
           <div className="selected" onClick={toggling}>
-            {selectedOption || "Mongoes"}
+            {selectedOption || "Filter by Region"}
+            {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </div>
           {isOpen && (
             <div className="select-items-container">
               <div className="items">
                 {options.map((option) => (
-                  <div className="listItem">
-                    <input
-                      type="radio"
-                      className="listItem"
-                      key={option.id}
-                      id={option.id}
-                    />
+                  <div className="listItem" key={option.id}>
+                    <input type="radio" className="listItem" id={option.id} />
                     <label htmlFor={option.id} onClick={onOptionClicked}>
                       {option.name}
                     </label>

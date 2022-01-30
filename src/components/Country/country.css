@@ -1,0 +1,38 @@
+.cardCountry {
+  background: var(--dark_mode_elements);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(17, 21, 23, 0.5);
+  transition: transform 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.cardCountry:hover {
+  transform: scale(1.05);
+}
+
+.imgCountry img {
+  max-width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.infosCountry {
+  padding: 20px 18px 30px 18px;
+}
+
+.nameCountry {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark_mode_text_light_mode_elements);
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark_mode_text_light_mode_elements);
+  opacity: 0.9;
+}
+
+span {
+  font-weight: 300;
+}
