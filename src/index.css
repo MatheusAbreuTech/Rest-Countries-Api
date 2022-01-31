@@ -15,7 +15,3 @@
   --light_mode_background: #fafafa;
   --dark_mode_text_light_mode_elements: #ffffff;
 }
-
-body {
-  background: var(--dark_mode_background);
-}

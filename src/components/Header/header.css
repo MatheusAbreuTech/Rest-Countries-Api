@@ -3,8 +3,45 @@
   background: var(--dark_mode_elements);
   box-shadow: 0 5px 10px rgba(17, 21, 23, 0.1);
 }
+
+.header.lightMode {
+  background: var(--dark_mode_text_light_mode_elements);
+}
+
+.header-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header-title {
   color: var(--dark_mode_text_light_mode_elements);
   font-size: 24px;
   font-weight: 800;
+}
+
+.header-title.lightMode {
+  color: var(--light_mode_text);
+}
+
+.darkMode {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--dark_mode_text_light_mode_elements);
+  font-weight: 600;
+}
+
+.btn-toggle.lightMode {
+  color: var(--light_mode_text);
+}
+
+.iconMoon {
+  color: white;
 }

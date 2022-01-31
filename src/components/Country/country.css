@@ -1,9 +1,14 @@
 .cardCountry {
   background: var(--dark_mode_elements);
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(17, 21, 23, 0.5);
+  box-shadow: 0 0 10px rgba(17, 21, 23, 0.5);
   transition: transform 150ms ease-in-out;
   cursor: pointer;
+}
+
+.cardCountry.lightMode {
+  background: var(--dark_mode_text_light_mode_elements);
+  box-shadow: 0 0 10px rgba(17, 21, 23, 0.1);
 }
 
 .cardCountry:hover {
@@ -26,11 +31,19 @@
   margin-bottom: 1rem;
 }
 
-h4 {
+.nameCountry.lightMode {
+  color: var(--light_mode_text);
+}
+
+.textInfo {
   font-size: 16px;
   font-weight: 600;
   color: var(--dark_mode_text_light_mode_elements);
   opacity: 0.9;
+}
+
+.textInfo.lightMode {
+  color: var(--light_mode_text);
 }
 
 span {

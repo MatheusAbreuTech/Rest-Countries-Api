@@ -19,7 +19,7 @@ const options = [
   },
 ];
 
-export const Filters = () => {
+export const Filters = ({ darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -41,25 +41,29 @@ export const Filters = () => {
   return (
     <div className="Container">
       <div className="filters">
-        <div className="box-search">
-          <AiOutlineSearch className="icon" />
+        <div className={`box-search ${darkMode ? "" : "lightMode"} `}>
+          <AiOutlineSearch className={`icon ${darkMode ? "" : "lightMode"}`} />
           <input
             type="text"
-            className="inputSearch"
+            className={`inputSearch ${darkMode ? "" : "lightMode"}`}
             placeholder="Search for a country..."
           />
         </div>
 
         <div className="select-box">
-          <div className="selected" onClick={toggling}>
+          <div
+            className={`selected ${darkMode ? "" : "lightMode"}`}
+            onClick={toggling}>
             {selectedOption || "Filter by Region"}
             {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </div>
           {isOpen && (
             <div className="select-items-container">
-              <div className="items">
+              <div className={`items ${darkMode ? "" : "lightMode"}`}>
                 {options.map((option) => (
-                  <div className="listItem" key={option.id}>
+                  <div
+                    className={`listItem ${darkMode ? "" : "lightMode"}`}
+                    key={option.id}>
                     <input type="radio" className="listItem" id={option.id} />
                     <label htmlFor={option.id} onClick={onOptionClicked}>
                       {option.name}

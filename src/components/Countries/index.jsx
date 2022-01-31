@@ -5,11 +5,11 @@ import "./countries.css";
 
 const countries = [1, 2, 3, 3, 4, 4];
 
-export const Countries = () => {
+export const Countries = ({ darkMode }) => {
   return (
     <div className="countries">
       {countries.map((country) => (
-        <Country />
+        <Country darkMode={darkMode} />
       ))}
     </div>
   );

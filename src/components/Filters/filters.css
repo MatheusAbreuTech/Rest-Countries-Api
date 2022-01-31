@@ -14,7 +14,11 @@
   border-radius: 5px;
   padding: 10px 20px;
   background: var(--dark_mode_elements);
-  box-shadow: 0 5px 10px rgba(17, 21, 23, 0.1);
+  box-shadow: 0 0 10px rgba(17, 21, 23, 0.1);
+}
+
+.box-search.lightMode {
+  background: var(--dark_mode_text_light_mode_elements);
 }
 
 .inputSearch {
@@ -29,14 +33,29 @@
   font-weight: 600;
 }
 
+.inputSearch.lightMode {
+  color: var(--light_mode_text);
+  opacity: 0.6;
+}
+
 .inputSearch::placeholder {
   color: var(--dark_mode_text_light_mode_elements);
   opacity: 0.7;
 }
 
+.inputSearch.lightMode::placeholder {
+  color: var(--light_mode_text);
+  opacity: 0.6;
+}
+
 .icon {
   font-size: 20px;
   color: var(--dark_mode_text_light_mode_elements);
+}
+
+.icon.lightMode {
+  color: var(--light_mode_text);
+  opacity: 0.6;
 }
 
 .select-box {
@@ -57,8 +76,13 @@
   border: none;
   border-radius: 5px;
   padding: 13px 20px;
-  box-shadow: 0 5px 10px rgba(17, 21, 23, 0.1);
+  box-shadow: 0 0 10px rgba(17, 21, 23, 0.1);
   cursor: pointer;
+}
+
+.selected.lightMode {
+  background: var(--dark_mode_text_light_mode_elements);
+  color: var(--light_mode_text);
 }
 
 .select-items-container {
@@ -70,7 +94,11 @@
   margin-top: 0.5rem;
   background: var(--dark_mode_elements);
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(17, 21, 23, 0.1);
+  box-shadow: 0 0 10px rgba(17, 21, 23, 0.1);
+}
+
+.items.lightMode {
+  background: var(--dark_mode_text_light_mode_elements);
 }
 
 .listItem {
@@ -84,9 +112,18 @@
   cursor: pointer;
 }
 
+.listItem.lightMode {
+  color: var(--light_mode_text);
+}
+
 .listItem:hover {
   opacity: 0.5;
   background: var(--dark_mode_background);
+}
+
+.listItem.lightMode:hover {
+  opacity: 0.9;
+  background: var(--light_mode_background);
 }
 
 .listItem input {
