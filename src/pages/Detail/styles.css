@@ -9,6 +9,7 @@
   height: 40px;
   background: var(--dark_mode_elements);
   color: var(--dark_mode_text_light_mode_elements);
+  font-weight: 600;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -19,8 +20,13 @@
   margin: 3rem 0;
 }
 
+.btn-back.lightMode {
+  background: var(--dark_mode_text_light_mode_elements);
+  color: var(--light_mode_text);
+}
+
 .btn-back:hover {
-  opacity: 0.9;
+  opacity: 0.5;
 }
 
 .arrowIcon {
@@ -32,15 +38,24 @@
   height: 350px;
 }
 
+.infos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .countryInfos {
   display: flex;
   gap: 8rem;
 }
 
-h2 {
-  margin-bottom: 1.5rem;
+.countryName {
   color: var(--dark_mode_text_light_mode_elements);
   font-weight: 800;
+}
+
+.countryName.lightMode {
+  color: var(--light_mode_text);
 }
 
 h4 {
@@ -54,21 +69,38 @@ img {
 
 .borderCountries {
   display: flex;
-  align-items: center;
+  gap: 1rem;
+}
+
+.titleBorder {
+  color: var(--dark_mode_text_light_mode_elements);
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.titleBorder.lightMode {
+  color: var(--light_mode_text);
 }
 
 .borderCountries ul {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 350px;
 }
 
-.borderCountries ul li {
+.borderCountries ul .border {
   list-style: none;
   background: var(--dark_mode_elements);
-  padding: 5px 10px;
+  padding: 5px 20px;
   border-radius: 5px;
   color: var(--dark_mode_text_light_mode_elements);
   opacity: 0.7;
   font-size: 600;
   box-shadow: 0 0 10px rgba(17, 21, 23, 0.5);
+}
+
+.borderCountries ul .border.lightMode {
+  background: var(--dark_mode_text_light_mode_elements);
+  color: var(--light_mode_text);
 }
