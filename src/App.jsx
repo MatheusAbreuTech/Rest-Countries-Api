@@ -26,10 +26,7 @@ function App() {
               <Home handleDarkMode={handleDarkMode} darkMode={darkMode} />
             }
           />
-          <Route
-            path="detail"
-            element={<CountryDetail darkMode={darkMode} />}
-          />
+          <Route path=":name" element={<CountryDetail darkMode={darkMode} />} />
         </Routes>
       </BrowserRouter>
     </div>
