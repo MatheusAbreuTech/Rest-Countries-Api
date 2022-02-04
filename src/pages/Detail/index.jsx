@@ -46,53 +46,53 @@ export const CountryDetail = ({ darkMode }) => {
           borders,
         } = c;
 
+        const togglin = darkMode ? "" : "lightMode";
+
         return (
           <div className="countryDetail" key={numericCode}>
             <div className="countryImage">
               <img src={flag} alt="" />
             </div>
             <div className="infos-container">
-              <h2 className={`countryName ${darkMode ? "" : "lightMode"}`}>
-                {name}
-              </h2>
+              <h2 className={`countryName ${togglin}`}>{name}</h2>
               <div className="countryInfos">
                 <div className="infos1">
-                  <h4 className={`textInfo ${darkMode ? "" : "lightMode"}`}>
+                  <h4 className={`textInfo ${togglin}`}>
                     Native Name: <span>{nativeName}</span>
                   </h4>
-                  <h4 className={`textInfo ${darkMode ? "" : "lightMode"}`}>
+                  <h4 className={`textInfo ${togglin}`}>
                     Population: <span>{population.toLocaleString()}</span>
                   </h4>
-                  <h4 className={`textInfo ${darkMode ? "" : "lightMode"}`}>
+                  <h4 className={`textInfo ${togglin}`}>
                     Region: <span>{region}</span>
                   </h4>
-                  <h4 className={`textInfo ${darkMode ? "" : "lightMode"}`}>
+                  <h4 className={`textInfo ${togglin}`}>
                     Sub Region: <span>{subregion}</span>
                   </h4>
-                  <h4 className={`textInfo ${darkMode ? "" : "lightMode"}`}>
+                  <h4 className={`textInfo ${togglin}`}>
                     Capital: <span>{capital}</span>
                   </h4>
                 </div>
                 <div className="infos2">
-                  <h4 className={`textInfo ${darkMode ? "" : "lightMode"}`}>
+                  <h4 className={`textInfo ${togglin}`}>
                     Top Level Domain: <span>{topLevelDomain}</span>
                   </h4>
-                  <h4 className={`textInfo ${darkMode ? "" : "lightMode"}`}>
+                  <h4 className={`textInfo ${togglin}`}>
                     Currencies: <span>{currencies[0].name}</span>
                   </h4>
-                  <h4 className={`textInfo ${darkMode ? "" : "lightMode"}`}>
+                  <h4 className={`textInfo ${togglin}`}>
                     Languages: <span>{languages[0].name}</span>
                   </h4>
                 </div>
               </div>
               <div className="borderCountries">
-                <h4 className={`titleBorder ${darkMode ? "" : "lightMode"}`}>
+                <h4 className={`titleBorder ${togglin}`}>
                   Border Countries:
                 </h4>
 
                 {borders.map((border) => (
                   <div
-                    className={`border ${darkMode ? "" : "lightMode"}`}
+                    className={`border ${togglin}`}
                     key={border}>
                     <h4>{border}</h4>
                   </div>
