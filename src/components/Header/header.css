@@ -45,3 +45,9 @@
 .iconMoon {
   color: white;
 }
+
+@media screen and (max-width: 450px) {
+  .header-title {
+    font-size: 18px;
+  }
+}

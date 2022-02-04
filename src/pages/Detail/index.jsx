@@ -89,17 +89,14 @@ export const CountryDetail = ({ darkMode }) => {
                 <h4 className={`titleBorder ${darkMode ? "" : "lightMode"}`}>
                   Border Countries:
                 </h4>
-                <div className="borders">
-                  <ul>
-                    {borders.map((border) => (
-                      <li
-                        className={`border ${darkMode ? "" : "lightMode"}`}
-                        key={border}>
-                        {border}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+
+                {borders.map((border) => (
+                  <div
+                    className={`border ${darkMode ? "" : "lightMode"}`}
+                    key={border}>
+                    <h4>{border}</h4>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

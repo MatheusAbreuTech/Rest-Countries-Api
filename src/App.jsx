@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className={`body ${darkMode ? "" : "lightMode"}`}>
+    <div>
       <BrowserRouter>
         <Header handleDarkMode={handleDarkMode} darkMode={darkMode} />
         <Routes>
