@@ -4,23 +4,25 @@ import { AiOutlineSearch } from "react-icons/ai";
 import "./filters.css";
 
 export const Filters = ({ darkMode, handleChange, searchValue, setFilter }) => {
+  const togglin = darkMode ? "" : "lightMode";
+
   return (
     <div className="Container">
       <div className="filters">
-        <div className={`box-search ${darkMode ? "" : "lightMode"} `}>
-          <AiOutlineSearch className={`icon ${darkMode ? "" : "lightMode"}`} />
+        <div className={`box-search ${togglin} `}>
+          <AiOutlineSearch className={`icon ${togglin}`} />
           <input
             type="text"
             onChange={handleChange}
             value={searchValue}
-            className={`inputSearch ${darkMode ? "" : "lightMode"}`}
+            className={`inputSearch ${togglin}`}
             placeholder="Search for a country..."
           />
         </div>
 
         <div className="select-box">
           <select
-            className={`select ${darkMode ? "" : "lightMode"}`}
+            className={`select ${togglin}`}
             onChange={(e) => setFilter(e.target.value)}>
             <option value="all">All</option>
             <option value="regionalbloc/EFTA">
