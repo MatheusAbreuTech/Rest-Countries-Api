@@ -4,39 +4,32 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 import "./filters.css";
 
-const options = [
-  {
-    name: "teste1",
-    id: 1,
-  },
-  {
-    name: "teste2",
-    id: 2,
-  },
-  {
-    name: "teste3",
-    id: 3,
-  },
-];
-
-export const Filters = ({ darkMode }) => {
+export const Filters = ({ darkMode, handleChange, searchValue, setFilter }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
 
-  const toggling = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const onOptionClicked = (value) => {
-    const option = value.target.innerHTML;
-    setSelectedOption(option);
-    setIsOpen(false);
-    // console.log(selectedOption);
-  };
-
-  useEffect(() => {
-    console.log(selectedOption);
-  }, [selectedOption]);
+  const options = [
+    {
+      name: "Africa",
+      desc: "Africa",
+    },
+    {
+      name: "Americas",
+      desc: "Americas",
+    },
+    {
+      name: "Asia",
+      desc: "Asia",
+    },
+    {
+      name: "Europe",
+      desc: "Europe",
+    },
+    {
+      name: "Oceania",
+      desc: "Oceania",
+    },
+  ];
 
   return (
     <div className="Container">
@@ -45,34 +38,45 @@ export const Filters = ({ darkMode }) => {
           <AiOutlineSearch className={`icon ${darkMode ? "" : "lightMode"}`} />
           <input
             type="text"
+            onChange={handleChange}
+            value={searchValue}
             className={`inputSearch ${darkMode ? "" : "lightMode"}`}
             placeholder="Search for a country..."
           />
         </div>
 
         <div className="select-box">
-          <div
-            className={`selected ${darkMode ? "" : "lightMode"}`}
-            onClick={toggling}>
-            {selectedOption || "Filter by Region"}
-            {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+          <div className="select-items-container">
+            <select name="" id="" onChange={(e) => setFilter(e.target.value)}>
+              <option value="all">all</option>
+              <option value="regionalbloc/EFTA">
+                European Free Trade Association
+              </option>
+              <option value="regionalbloc/CARICOM">Caribbean Community</option>
+              <option value="regionalbloc/PA">Pacific Alliance</option>
+              <option value="regionalbloc/AU">African Union</option>
+              <option value="regionalbloc/USAN">
+                Union of South American Nations
+              </option>
+              <option value="regionalbloc/EEU">Eurasian Economic Union</option>
+              <option value="regionalbloc/AL">Arab League</option>
+              <option value="regionalbloc/ASEAN">
+                Association of Southeast Asian Nations
+              </option>
+              <option value="regionalbloc/CAIS">
+                Central American Integration System
+              </option>
+              <option value="regionalbloc/CEFTA">
+                Central European Free Trade Agreement
+              </option>
+              <option value="regionalbloc/NAFTA">
+                North American Free Trade Agreement
+              </option>
+              <option value="regionalbloc/SAARC">
+                South Asian Association for Regional Cooperation
+              </option>
+            </select>
           </div>
-          {isOpen && (
-            <div className="select-items-container">
-              <div className={`items ${darkMode ? "" : "lightMode"}`}>
-                {options.map((option) => (
-                  <div
-                    className={`listItem ${darkMode ? "" : "lightMode"}`}
-                    key={option.id}>
-                    <input type="radio" className="listItem" id={option.id} />
-                    <label htmlFor={option.id} onClick={onOptionClicked}>
-                      {option.name}
-                    </label>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>
