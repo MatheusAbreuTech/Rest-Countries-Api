@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Rest-Countries-Api
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div style="display: inline_block; width: 100%" align="center">
+    <div style="display: inline_block; margin: 20px" align="center">
+        <img src="./public/images/homeDark.png" alt="Home Page Dark" style="width: 400px">
+        <img src="./public/images/detailDark.png" alt="Detail Page Dark" style="width: 400px">
+    </div>
+    <div style="display: inline_block; margin: 20px" align="center">
+        <img src="./public/images/homeLight.png" alt="Home Page Light" style="width: 400px">
+        <img src="./public/images/detailLight.png" alt="Detail Page Light" style="width: 400px">
+    </div>
+    <div style="display: inline_block" align="center">
+        <img src="./public/images/homeMobileDark.png" alt="Home Page Mobile Dark">
+        <img src="./public/images/detailMobileDark.png" alt="Detail Page Mobile Dark">
+        <img src="./public/images/homeMobileLight.png" alt="Home Page Mobile Light">
+        <img src="./public/images/detailMobileLight.png" alt="Detail Page Mobile Light">
+    </div>
+</div>
 
-## Available Scripts
+> O projeto consiste em listar todos os paises do mundo, filtra-los pelo nome e região, mostrar as informações de um pais e, além disso, poder escolher o tema do site entre escuro e claro.
 
-In the project directory, you can run:
+## Técnologias utilizadas
 
-### `npm start`
+- ReactJS
+  - useState
+  - useEffect
+  - react-router-dom
+- JavaScript
+- CSS3
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Futuras implementaçõs
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ContextApi
+- TypeScript
+- Styled-components
 
-### `npm test`
+## 💻 Pré-requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-### `npm run build`
+<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Você instalou a versão mais recente do `Node` em sua máquina.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Instalando Rest-Countries-Api
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para instalar o projeto, siga estas etapas:
 
-### `npm run eject`
+- Crie uma pasta chamada CountriesApi
+- Faça um clone desse repositório na pasta criada
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+git clone https://github.com/MthAbreu/Rest-Countries-Api.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Por último, instale todas as dependencias
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+//ou
 
-## Learn More
+yarn install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ☕ Usando Rest-Countries-Api
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para usar o projeto, siga estas etapas:
 
-### Code Splitting
+- Iniciando o servidor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm start
 
-### Analyzing the Bundle Size
+//ou
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+yarn start
+```
 
-### Making a Progressive Web App
+## 📫 Contribuindo para Rest-Countries-Api
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
 
-### Advanced Configuration
+Para contribuir com o projeto, siga estas etapas:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Bifurque este repositório.
+2. Crie um branch: `git checkout -b <nome_branch>`.
+3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
+4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
+5. Crie a solicitação de pull.
 
-### Deployment
+Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[⬆ Voltar ao topo](#Rest-Countries-Api)<br>
