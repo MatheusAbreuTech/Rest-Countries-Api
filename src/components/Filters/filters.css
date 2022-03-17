@@ -57,6 +57,8 @@
 }
 
 .select-box .select {
+  max-width: 200px;
+  width: 100%;
   padding: 13px;
   background: var(--dark_mode_elements);
   border: none;

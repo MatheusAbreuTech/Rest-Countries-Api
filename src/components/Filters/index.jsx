@@ -25,32 +25,11 @@ export const Filters = ({ darkMode, handleChange, searchValue, setFilter }) => {
             className={`select ${togglin}`}
             onChange={(e) => setFilter(e.target.value)}>
             <option value="all">All</option>
-            <option value="regionalbloc/EFTA">
-              European Free Trade Association
-            </option>
-            <option value="regionalbloc/CARICOM">Caribbean Community</option>
-            <option value="regionalbloc/PA">Pacific Alliance</option>
-            <option value="regionalbloc/AU">African Union</option>
-            <option value="regionalbloc/USAN">
-              Union of South American Nations
-            </option>
-            <option value="regionalbloc/EEU">Eurasian Economic Union</option>
-            <option value="regionalbloc/AL">Arab League</option>
-            <option value="regionalbloc/ASEAN">
-              Association of Southeast Asian Nations
-            </option>
-            <option value="regionalbloc/CAIS">
-              Central American Integration System
-            </option>
-            <option value="regionalbloc/CEFTA">
-              Central European Free Trade Agreement
-            </option>
-            <option value="regionalbloc/NAFTA">
-              North American Free Trade Agreement
-            </option>
-            <option value="regionalbloc/SAARC">
-              South Asian Association for Regional Cooperation
-            </option>
+            <option value="region/europe">Europa</option>
+            <option value="region/americas">Americas</option>
+            <option value="region/oceania">Oceania</option>
+            <option value="region/asia">Asia</option>
+            <option value="region/africa">Africa</option>
           </select>
         </div>
       </div>
